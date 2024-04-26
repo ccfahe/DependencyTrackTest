@@ -22,7 +22,7 @@ pipeline {
         }
          stage('Dependency Track Upload') {
             steps {
-                dependencyTrackPublisher artifact: '*.xml', autoCreateProjects: true, dependencyTrackApiKey: 'deptrack', dependencyTrackFrontendUrl: '', dependencyTrackUrl: 'http://192.168.1.2:8888/', overrideGlobals: true, projectId: '5c7f470a-d554-4a95-8e17-f79f976d2e44', synchronous: true
+                dependencyTrackPublisher artifact: 'target/bom.xml', autoCreateProjects: true, dependencyTrackApiKey: 'deptrack', dependencyTrackFrontendUrl: '', dependencyTrackUrl: 'http://192.168.1.2:8888/', overrideGlobals: true, projectId: '5c7f470a-d554-4a95-8e17-f79f976d2e44', synchronous: true
             }
         }
     }
